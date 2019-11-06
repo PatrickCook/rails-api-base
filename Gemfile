@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.4'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
+gem 'listen'
 # Use Puma as the app server
 gem 'puma'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
