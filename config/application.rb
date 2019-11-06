@@ -27,5 +27,10 @@ module ApiApp
     # Skip views, helpers and assets when generating a new resource.
     config.autoload_paths << Rails.root.join('lib')
     config.api_only = true
+    config.session_store :cookie_store, key: '_interslice_session'
+    config.middleware.use ActionDispatch::Cookies # Required for all session management
+    config.middleware.use ActionDispatch::Session::CookieStore, config.session_options
+
+    RSpotify::authenticate("988ae7afb59749a9a5d359c27767bd78", "47c2a53a79474ff49eed9e52b192a216")
   end
 end

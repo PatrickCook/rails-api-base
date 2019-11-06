@@ -10,4 +10,8 @@ class AuthenticationController < ApplicationController
       render json: { error: command.errors }, status: :unauthorized
     end
   end
+
+  def spotify
+    spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
+  end
 end
