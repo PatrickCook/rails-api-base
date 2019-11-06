@@ -1,5 +1,5 @@
 class AuthenticationController < ApplicationController
-  skip_before_action :authenticate_request
+  # skip_before_action :authenticate_request
 
   def authenticate
     command = AuthenticateUser.call(params[:email], params[:password])
@@ -13,5 +13,8 @@ class AuthenticationController < ApplicationController
 
   def spotify
     spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
+    @current_user.update(spotify_hash: spotify_user.to_hash)
+
+    redirect_to spotify_index_path
   end
 end

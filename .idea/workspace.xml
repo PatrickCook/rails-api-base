@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffa404ea-f88e-4d9d-bf4c-5cbf9599f265" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/patrickcook.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/spotify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/spotify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/spotify_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/spotify_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spotify/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/spotify_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SpotifyAutomator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SpotifyAutomator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/.ruby-version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/authentication_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/authentication_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/omniauth.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/omniauth.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20160411141158_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20160411141158_create_users.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,10 +55,13 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -272,7 +289,7 @@
       <workItem from="1572280398520" duration="2055000" />
       <workItem from="1572452431959" duration="6000" />
       <workItem from="1573069877474" duration="647000" />
-      <workItem from="1573070801078" duration="3453000" />
+      <workItem from="1573070801078" duration="9284000" />
     </task>
     <task id="LOCAL-00001" summary="base api with user authentication working">
       <created>1570855120452</created>
@@ -308,12 +325,27 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="base api with user authentication working" />
     <option name="LAST_COMMIT_MESSAGE" value="base api with user authentication working" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/authentication_controller.rb</url>
+          <line>14</line>
+          <properties a="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rails_api_base@Development__rails_api_base.rcov" NAME="Development: rails-api-base Coverage Results" MODIFIED="1570854496086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails-api-base" />
-    <SUITE FILE_PATH="coverage/SpotifyAutomator@Development__SpotifyAutomator.rcov" NAME="Development: SpotifyAutomator Coverage Results" MODIFIED="1573074447124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SpotifyAutomator" />
+    <SUITE FILE_PATH="coverage/SpotifyAutomator@Development__SpotifyAutomator.rcov" NAME="Development: SpotifyAutomator Coverage Results" MODIFIED="1573080568665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SpotifyAutomator" />
     <SUITE FILE_PATH="coverage/SpotifyAutomator@Development__rails_api_base.rcov" NAME="Development: rails-api-base Coverage Results" MODIFIED="1573069885006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails-api-base" />
   </component>
 </project>
