@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_secure_password
-
   serialize :spotify_hash, Hash
+  has_many :played_tracks, dependent: :destroy
+
+  has_secure_password
 end

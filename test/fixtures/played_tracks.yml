@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  references: 
+  uri: MyString
+  played_at: MyString
+  play_count: 1
+
+two:
+  references: 
+  uri: MyString
+  played_at: MyString
+  play_count: 1

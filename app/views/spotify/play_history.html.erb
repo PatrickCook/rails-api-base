@@ -1,0 +1,18 @@
+<h1>Play History</h1>
+<%= button_to 'Fetch Recently Played', spotify_add_recently_played_path, method: :get %>
+<table>
+  <tr>
+    <th>#</th>
+    <th>Track</th>
+    <th>Artists</th>
+    <th>Played At</th>
+  </tr>
+  <% @play_history.each_with_index do |t, index| %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= t.name %></td>
+      <td><%= t.artists %></td>
+      <td><%= t.played_at.in_time_zone("Pacific Time (US & Canada)").to_datetime %></td>
+    </tr>
+  <% end %>
+</table>

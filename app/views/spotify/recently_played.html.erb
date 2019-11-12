@@ -1,0 +1,16 @@
+<h1>Recently Played</h1>
+
+<table>
+  <tr>
+    <th>Track</th>
+    <th>Artists</th>
+    <th>Played At</th>
+  </tr>
+  <% @recently_played.each do |t| %>
+    <tr>
+      <td><%= t.name %></td>
+      <td><%= t.artists.map(&:name).join(", ") %></td>
+      <td><%= Time.parse(t.played_at).in_time_zone("Pacific Time (US & Canada)").to_datetime %></td>
+    </tr>
+  <% end %>
+</table>

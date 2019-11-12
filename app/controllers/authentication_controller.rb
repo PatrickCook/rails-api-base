@@ -15,6 +15,6 @@ class AuthenticationController < ApplicationController
     spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
     @current_user.update(spotify_hash: spotify_user.to_hash)
 
-    redirect_to spotify_index_path
+    redirect_to spotify_dashboard_path
   end
 end

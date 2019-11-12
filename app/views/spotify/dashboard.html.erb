@@ -1,11 +1,7 @@
 <h1>Welcome back!</h1>
 <p><%= "Here are your music listening stats #{@spotify_user.display_name.split(' ').first}:" %></p>
-<h2>Recently Played:</h2>
-<ul>
-  <% @recently_played.each do |track|%>
-    <li><%= "#{track.name} by #{track.artists.map(&:name).join(", ")}" %></li>
-  <% end %>
-</ul>
+<p><%= link_to "Play History", spotify_play_history_path %></p>
+<p><%= link_to "Recently Played", spotify_recently_played_path %></p>
 <div>
   <div style="width: 33.33%; float: left">
     <h2>Top Genres:</h2>

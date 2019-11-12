@@ -7,7 +7,7 @@ gem 'pg'
 gem 'listen'
 # Use Puma as the app server
 gem 'puma'
-gem 'omniauth-oauth2', '~> 1.3.1'
+gem 'omniauth-oauth2'
 gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -35,4 +35,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jwt'
 gem 'simple_command'
-gem 'rspotify'
+gem 'rspotify', '~> 2.7.0'

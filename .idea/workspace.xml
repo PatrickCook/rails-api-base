@@ -2,23 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffa404ea-f88e-4d9d-bf4c-5cbf9599f265" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/patrickcook.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/spotify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/spotify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/spotify_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/spotify_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/spotify/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/spotify_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/play_history.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/play_history.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/play_history_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/concerns/spotify_omniauth_extension.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/played_track.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spotify/create.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spotify/play_history.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spotify/recently_played.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20191108194725_create_played_tracks.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/play_history_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/played_tracks.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/played_track_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/SpotifyAutomator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SpotifyAutomator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/.ruby-version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/authentication_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/authentication_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/spotify_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/spotify_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotify/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/spotify/dashboard.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/omniauth.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/omniauth.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20160411141158_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20160411141158_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Erb File" />
         <option value="Ruby File" />
       </list>
     </option>
@@ -63,6 +71,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/spotify" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -289,7 +302,11 @@
       <workItem from="1572280398520" duration="2055000" />
       <workItem from="1572452431959" duration="6000" />
       <workItem from="1573069877474" duration="647000" />
-      <workItem from="1573070801078" duration="9284000" />
+      <workItem from="1573070801078" duration="9352000" />
+      <workItem from="1573094625630" duration="656000" />
+      <workItem from="1573239629241" duration="6523000" />
+      <workItem from="1573517859042" duration="532000" />
+      <workItem from="1573598343990" duration="3795000" />
     </task>
     <task id="LOCAL-00001" summary="base api with user authentication working">
       <created>1570855120452</created>
@@ -340,12 +357,19 @@
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/db/migrate/20191108194725_create_played_tracks.rb</url>
+          <properties a="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rails_api_base@Development__rails_api_base.rcov" NAME="Development: rails-api-base Coverage Results" MODIFIED="1570854496086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails-api-base" />
-    <SUITE FILE_PATH="coverage/SpotifyAutomator@Development__SpotifyAutomator.rcov" NAME="Development: SpotifyAutomator Coverage Results" MODIFIED="1573080568665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SpotifyAutomator" />
+    <SUITE FILE_PATH="coverage/SpotifyAutomator@Development__SpotifyAutomator.rcov" NAME="Development: SpotifyAutomator Coverage Results" MODIFIED="1573601867954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SpotifyAutomator" />
     <SUITE FILE_PATH="coverage/SpotifyAutomator@Development__rails_api_base.rcov" NAME="Development: rails-api-base Coverage Results" MODIFIED="1573069885006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails-api-base" />
   </component>
 </project>
