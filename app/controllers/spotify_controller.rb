@@ -8,14 +8,14 @@ class SpotifyController < ApplicationController
   end
 
   def play_history
-    @play_history = @current_user.played_tracks
+    @play_history = @current_user.played_tracks.sort_by(&:played_at).reverse
   end
 
   def recently_played
     @recently_played = @spotify_user.recently_played(limit: 50)
   end
 
-  def add_recently_played
+  def refresh_recently_played
     after = fetch_after_timestamp
     recently_played = @spotify_user.recently_played(limit: 50, after: after)
     recently_played.each do |track|
@@ -23,7 +23,28 @@ class SpotifyController < ApplicationController
       @current_user.played_tracks.create(name: track.name, artists: artists, uri: track.uri, played_at: track.played_at)
     end
 
-    render json: { action: "add_recently_played", status: "success", added_tracks: recently_played.count }
+    respond_to do |format|
+      format.html do
+        redirect_to spotify_play_history_path
+      end
+
+      format.json do
+        render json: { action: "add_recently_played", status: "success", added_tracks: recently_played.count }
+      end
+    end
+  end
+
+  def generate_top_songs_playlist
+    top_tracks = @spotify_user.top_tracks(limit: 30, time_range: params["time_range"])
+    playlist = @spotify_user.create_playlist!("Spotify Automator: Top Tracks (#{params["time_range"]})")
+
+    playlist.add_tracks!(top_tracks)
+    flash[:notice] = "Playlist successfully created"
+    redirect_to spotify_dashboard_path
+  end
+
+  def generate_top_artists_playlist
+
   end
 
   private
